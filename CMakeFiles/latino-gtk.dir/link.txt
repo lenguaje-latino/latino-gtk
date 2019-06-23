@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,liblatino-gtk.so -o liblatino-gtk.so CMakeFiles/latino-gtk.dir/src/latino-gtk.c.o -llatino 

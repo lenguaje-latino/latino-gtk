@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/primi/src/latino-gtk/src/latino-gtk.c
+gtk/gtk.h
+-
+latino.h
+/home/primi/src/latino-gtk/src/latino.h
+
