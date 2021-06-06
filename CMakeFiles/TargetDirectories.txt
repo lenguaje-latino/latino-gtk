@@ -1,7 +1,7 @@
-/home/primi/src/latino-gtk/CMakeFiles/install/strip.dir
-/home/primi/src/latino-gtk/CMakeFiles/edit_cache.dir
-/home/primi/src/latino-gtk/CMakeFiles/latino-gtk.dir
-/home/primi/src/latino-gtk/CMakeFiles/rebuild_cache.dir
-/home/primi/src/latino-gtk/CMakeFiles/list_install_components.dir
-/home/primi/src/latino-gtk/CMakeFiles/install/local.dir
-/home/primi/src/latino-gtk/CMakeFiles/install.dir
+/home/primi/latino-gtk/CMakeFiles/install/strip.dir
+/home/primi/latino-gtk/CMakeFiles/install/local.dir
+/home/primi/latino-gtk/CMakeFiles/install.dir
+/home/primi/latino-gtk/CMakeFiles/list_install_components.dir
+/home/primi/latino-gtk/CMakeFiles/rebuild_cache.dir
+/home/primi/latino-gtk/CMakeFiles/edit_cache.dir
+/home/primi/latino-gtk/CMakeFiles/latino-gtk.dir

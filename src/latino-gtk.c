@@ -58,14 +58,14 @@ static void gtkredimensionar(lat_mv *mv) {
   lat_objeto *y = latC_desapilar(mv);
   lat_objeto *x = latC_desapilar(mv);
   lat_objeto *ventana = latC_desapilar(mv);
-  gtk_window_set_default_size(GTK_WINDOW(latC_checar_cptr(ventana)),
+  gtk_window_set_default_size(GTK_WINDOW(latC_checar_cptr(mv, ventana)),
                               latC_checar_numerico(mv, x),
                               latC_checar_numerico(mv, y));
 }
 
 static void gtkmostrar_todo(lat_mv *mv) {
   lat_objeto *ventana = latC_desapilar(mv);
-  gtk_widget_show_all(latC_checar_cptr(ventana));
+  gtk_widget_show_all(latC_checar_cptr(mv, ventana));
 }
 
 static void gtkmenu(lat_mv *mv) { gtk_main(); }
@@ -92,27 +92,27 @@ static void gtkboton_texto(lat_mv *mv) {
 static void gtkagregar(lat_mv *mv) {
   lat_objeto *b = latC_desapilar(mv);
   lat_objeto *a = latC_desapilar(mv);
-  gtk_container_add(GTK_CONTAINER(latC_checar_cptr(a)), latC_checar_cptr(b));
+  gtk_container_add(GTK_CONTAINER(latC_checar_cptr(mv, a)), latC_checar_cptr(mv, b));
 }
 
 static void gtkboton_destruir(lat_mv *mv) {
   lat_objeto *boton = latC_desapilar(mv);
   lat_objeto *ventana = latC_desapilar(mv);
-  g_signal_connect_swapped(latC_checar_cptr(boton), "clicked",
+  g_signal_connect_swapped(latC_checar_cptr(mv, boton), "clicked",
                            G_CALLBACK(gtk_widget_destroy),
-                           latC_checar_cptr(ventana));
+                           latC_checar_cptr(mv, ventana));
 }
 
 static void gtkllamar_funcion(lat_mv *mv) {
   lat_objeto *fun = latC_desapilar(mv);
   lat_objeto *boton = latC_desapilar(mv);
-  g_signal_connect_swapped(latC_checar_cptr(boton), "clicked",
-                           G_CALLBACK(latC_checar_cptr(fun)), NULL);
+  g_signal_connect_swapped(latC_checar_cptr(mv, boton), "clicked",
+                           G_CALLBACK(latC_checar_cptr(mv, fun)), NULL);
 }
 
 static const lat_CReg libgtk[] = {{"iniciar", gtkiniciar, 0},
                                   {"menu", gtkmenu, 0},
-                                  {"ventanaNueva", gtkventana, 1},
+                                  {"ventanaNueva", gtkventana, 0},
                                   {"titulo", gtktitulo, 2},
                                   {"mostrarTodo", gtkmostrar_todo, 1},
                                   {"cajaNueva", gtkcrear_caja, 0},
@@ -123,6 +123,6 @@ static const lat_CReg libgtk[] = {{"iniciar", gtkiniciar, 0},
                                   {"llamarFuncion", gtkllamar_funcion, 2},
                                   {NULL, NULL}};
 
-void latC_abrir_liblatino_gtklib(lat_mv *mv) {
+void latC_abrir_liblatino_gtk(lat_mv *mv) {
   latC_abrir_liblatino(mv, LIB_GTK_NAME, libgtk);
 }

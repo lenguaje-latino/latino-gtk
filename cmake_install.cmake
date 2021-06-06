@@ -1,4 +1,4 @@
-# Install script for directory: /home/primi/src/latino-gtk
+# Install script for directory: /home/primi/latino-gtk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,7 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE FILE FILES "/home/primi/src/latino-gtk/liblatino-gtk.so")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE FILE FILES "/home/primi/latino-gtk/liblatino-gtk.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/primi/src/latino-gtk/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/primi/latino-gtk/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
