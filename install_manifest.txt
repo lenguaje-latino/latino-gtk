@@ -1,1 +1,1 @@
-/usr/local/lib/liblatino-gtk.so
+/usr/local/lib/msys-latino-gtk.dll

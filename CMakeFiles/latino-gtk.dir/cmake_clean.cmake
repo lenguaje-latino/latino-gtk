@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/latino-gtk.dir/src/latino-gtk.c.o"
-  "liblatino-gtk.pdb"
-  "liblatino-gtk.so"
+  "liblatino-gtk.dll.a"
+  "msys-latino-gtk.dll"
+  "msys-latino-gtk.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
